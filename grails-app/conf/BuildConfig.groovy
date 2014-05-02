@@ -28,7 +28,7 @@
  * ############################################################################
  */
 grails.plugin.location.backend = "../OpenLabBackend"
-grails.plugin.location.geneTracker = "../GeneTracker"
+//grails.plugin.location.geneTracker = "../OpenLabGeneTracker"
 grails.project.class.dir = "target/classes"
 grails.project.test.class.dir = "target/test-classes"
 grails.project.test.reports.dir = "target/test-reports"
