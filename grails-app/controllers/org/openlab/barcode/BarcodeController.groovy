@@ -100,7 +100,7 @@ class BarcodeController {
 		def posResponse
 		try{
 			def printerParams = barcodeBuilderService.getParamsFromBarcode(barcode)
-			println "printerParams: " + printerParams
+			log.info "printerParams: " + printerParams
 			posResponse = labelPrinterService.sendToLabelPrinter(printerParams)
 		}catch(Exception e){
 			log.error ("Error during Label Print:"+e.getMessage()+ e.getStackTrace())
