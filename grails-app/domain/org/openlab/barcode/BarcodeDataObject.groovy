@@ -29,7 +29,7 @@
  */
 package org.openlab.barcode
 
-import org.openlab.main.DataObject;
+import grails.util.Holders
 
 class BarcodeDataObject {
 
@@ -46,7 +46,7 @@ class BarcodeDataObject {
 	static constraints = {
 		typeLetter(maxSize: 2, unique: true)
 		fullName validator: { val, obj ->
-			if(org.codehaus.groovy.grails.commons.ApplicationHolder.application.mainContext.getBean("grailsApplication").getDomainClass(val.toString()))
+			if(Holders.grailsApplication.getDomainClass(val.toString()))
 				return true
 			else return false
 		}
